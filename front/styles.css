@@ -1,0 +1,26 @@
+/* Ensure the body takes up the full height */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should expand to fill available space */
+.content {
+    flex: 1;
+}
+
+/* Sticky footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+footer a {
+	color: #fff;
+}
