@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS  # Import CORS
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ CORS(app)
 # Configure OpenAI API URL and default instructions
 OPENAI_API_URL = "https://api.openai.com/v1/realtime"
 DEFAULT_INSTRUCTIONS = "You are helpful and have some tools installed.\n\nIn the tools you have the ability to control a robot hand."
-OPENAI_API_KEY = "sk-proj-" # Insert your own OpenAI key
+OPENAI_API_KEY =  os.environ['OPENAI_API_KEY'] # Insert your own OpenAI key
 
 # Homepage route (optional)
 @app.route('/')
