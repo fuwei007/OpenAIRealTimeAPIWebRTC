@@ -181,7 +181,7 @@ function startWebRTC() {
         peerConnection.createOffer().then((offer) => { 
             peerConnection.setLocalDescription(offer); // Set local description (offer) 
             // Send the offer to the backend for signaling exchange 
-            fetch(baseUrl + '/api/rtc-connect', { 
+            fetch(baseUrl + '/api/session', {
                 method: 'POST', 
                 body: offer.sdp, // Send the SDP of the offer to the backend 
                 headers: { 
